@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ff-heading: 'Allison', cursive;
+    --ff-body: 'Varela Round', sans-serif;
+
+    --fw-regular: 300;
+    --fw-semi-bold: 700;
+    --fw-bold: 900;
+
+    --clr-v-light: #eee2dc;
+    --clr-light: #edc7b7;
+    --clr-mid : #bab2b5;
+    --clr-dark: #123c69;
+    --clr-v-dark : #ac3b61;
+
+    --fs-h1: 4rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+
+    --bs: 0.5em 0.5em 1em rgba(0,0,0,0.7);
+}
+h1{
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h1);
+}
+h2{
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-h2);
+}
+h3{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-h3);
+}
+p{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-body);
+}
+a{
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-body);
+    text-decoration: none;
+    color: #000;
+}
+section{
+    background-position: center;
+    background-size: cover;
+}
+
+/* -----------Navbar--------------- */
+
+.logo img{
+    min-height: 9vh;
+    max-height: 12vh;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 1em;
+    margin: 0.3em 3em;
+    flex: 1;
+}
+.navlist{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 30%;
+}
+.navlist a{
+    font-weight: var(--fw-bold);
+}
+.navlist a:hover{
+    color: var(--clr-v-light);
+}
+section{
+    height: 100vh;
+}
+.header{
+    background-image: url(./Img/Main_back.jpg);
+}
+.girl-back{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 90vh;
+}
+.title{
+    font-family: var(--ff-heading);
+}
+.subtitle{
+    font-family: var(--ff-body);
+    color: var(--clr-v-dark);
+}
+.sec-body{
+    background-color: rgba(255, 255, 255, 0.249);
+    border-radius: 5px;
+    padding: 1em;
+    box-shadow: var(--bs);
+}
+.sec-head{
+    position: absolute;
+    top: 70%;
+    left: 15%;
+    transform: translate(-15%,-70%);
+}
+.sec-head h3{
+    margin-top: 1em;
+    color: var(--clr-v-dark);
+}
+.sec-head p{
+    margin-top: 1em;
+    color: var(--clr-v-light);
+    font-size: 1.25em;
+}
+.btn{
+    color: var(--clr-light);
+    background-color: var(--clr-v-dark);
+    min-height: 30px;
+    min-width: 100px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin: 2em;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.typewriter{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+      animation-iteration-count: infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+/* ---------------ABOUT------------------- */
+.logoo{
+    margin: 2em 13em;
+    min-height: 9vh;
+    max-height: 12vh;
+}
+.abt{
+    background-image: url(./Img/abt_bavk.jpg);
+}
+.sec-abt{
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-10%);
+    height: 65vh;
+    width: 65%;
+    display: flex;
+}
+.sec-abt img{
+    height: 50vh;
+    box-shadow: var(--bs);
+    transition: 0.5s all ease;
+}
+.sec-abt img:hover{
+    transform: translateY(-10px);
+}
+.sec-abt p{
+    color: #000;
+}
+.sec-abt .box-items{
+    margin: 2em 3em;
+    display: flex;
+    flex-direction: column;
+}
+.box-items h1{
+    font-family: var(--ff-heading);
+}
+.box-items p{
+    font-family: var(--ff-body);
+}
+
+/* -------------Testimonial----------------- */
+.testimonial{
+    background-image: url(./Img/tt-back.jpg);
+}
+.testimonial .box-items{
+    margin: 1em 10em;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.sec-test{
+    width: 300px;
+    background-color: rgba(73, 75, 82, 0.479);
+    cursor: pointer;
+    transition: transform 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sec-test:hover{
+    transform: translateY(-10px);
+}
+.sec-test p{
+    font-size: var(--fs-body);
+    margin: 12px 0;
+    color: var(--clr-light);
+}
+.sec-test i{
+    font-size: var(--fs-body);
+    color: var(--clr-v-light);
+}
+.testimonial .sec-test h3{
+    font-weight: var(--fw-semi-bold);
+    font-size: var(--fs-h3);
+    color: var(--clr-v-light);
+}
+
+.sec-test img{
+    padding: 25px;
+    border-radius: 50%;
+    width: 100%;
+    max-height: 170px;
+    width: auto;
+}
+footer{
+    height: 50vh;
+    background-color: var(--clr-v-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer p {
+    margin: 1em;
+}
+.social-icons a i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+.social-icons a i:hover{
+    color: var(--clr-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+  /* ------------------------------------ */
+  .contact{
+    background: linear-gradient(315deg, #ffffff 0%, #e0e3e6 74%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .maps{
+    margin: 3em;
+}
+.maps h1{
+    font-family: var(--ff-body);
+    margin-bottom: 0.5em;
+}
+  .contact iframe{
+      
+      width: 700px;
+      height: 450px;
+      border: none;
+      box-shadow: var(--bs);
+      transition:  1s ease;
+  }
+  .contact iframe:hover{
+      transform: translateX(-10px);
+  }
+  .box-itemss{
+    width: 100%;
+  }
+  .social , .sociall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .sociall{
+      margin-top: 1em;
+  }
+  .social h1, .sociall h1{
+      font-size: var(--fs-h2);
+      font-family: var(--ff-heading);
+      margin: 10px;
+  }
+  .box-itemss img{
+      height: 100px;
+      position: absolute;
+      top: 10%;
+      right: 2%;
+      transform: translate(-10%,-2%);
+  }
+  .sociall .subtitle{
+      font-size: var(--fs-h2);
+      margin-bottom: 1em;
+      transition:  0.5s all ease-in;
+  }
+  .sociall .subtitle:hover {
+    transform: scale(1.05);
+}
+  .wrapper{
+    display: inline-flex;
+    margin-top: 1em;
+  }
+  .wrapper .icon{
+    margin: 0 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 1s all ease;
+  }
+  .wrapper .icon span{
+    display: block;
+    height: 60px;
+    width: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.5s all ease;
+  }
+  .wrapper .icon span i{
+    line-height: 60px;
+    font-size: 25px;
+  }
+  .wrapper .icon span:hover{
+      transform: translateY(-10px);
+  }
+
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .facebook span{
+    color: #3B5999;
+  }
+  .wrapper .twitter span{
+    color: #46C1F6;
+  }
+  .wrapper .instagram span{
+    color: #e1306c;
+  }
+  .wrapper .youtube span{
+    color: #DE463B;
+  }
+  .wrapper .facebook:hover span{
+    background: #3B5999;
+  }
+  .wrapper .twitter:hover span{
+    background: #46C1F6;
+  }
+  .wrapper .instagram:hover span{
+    background: #e1306c;
+  }
+  .wrapper .youtube:hover span{
+    background: #DE463B;
+  }
